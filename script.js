@@ -5,7 +5,7 @@ let globalArrayOfWords;
 
 async function start() {
     await loadWordList();
-    let wordToFind = "aben" // change this variable to search for another word
+    let wordToFind = "abe" // change this variable to search for another word
     binarySearch(wordToFind);
 }
 
@@ -15,11 +15,10 @@ function compare(wordToFind, object) {
 }
 function binarySearch(wordToFind) {
     let wordHasBeenFound = false
-
     let maxNum = globalArrayOfWords.length - 1
     let minNum = 0
 
-    //the max iterations is 20
+    //the max iterations in this is 20
     //to make sure a stackOverflow error doesn't occur. i use for a loop with max 25 iterations - this gives a breathing room to inspect the error
     //silly - i know - but then if something goes wrong, or wordToFind doesn't exist, it doesn't fry your browser :)
     for (let i = 0; i < 25 && !wordHasBeenFound; i++) {
