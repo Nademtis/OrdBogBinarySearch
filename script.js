@@ -18,8 +18,8 @@ function binarySearch(wordToFind) {
     let maxNum = globalArrayOfWords.length - 1
     let minNum = 0
 
-    //the max iterations in this is 20
-    //to make sure a stackOverflow error doesn't occur. i use for a loop with max 25 iterations - this gives a breathing room to inspect the error
+    //the max iterations based on the globalWords.Length is 20
+    //to make sure an stackOverflow error doesn't occur. i use for a loop with max 25 iterations - this gives a breathing room to inspect the potential error
     //silly - i know - but then if something goes wrong, or wordToFind doesn't exist, it doesn't fry your browser :)
     for (let i = 0; i < 25 && !wordHasBeenFound; i++) {
         let middleIndex = Math.floor((maxNum + minNum) / 2)
